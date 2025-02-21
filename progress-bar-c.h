@@ -10,6 +10,7 @@ typedef struct{
     int progress;
     int total;
     char* format;
+    char* completedText;
     bool showPercent;
     bool showCount;
 } ProgressBar;
@@ -23,6 +24,7 @@ ProgressBar init(char symbol, int length, int total) {
     pb.total = total;
     pb.startSymbol = '[';
     pb.endSymbol = ']';
+    pb.completedText = NULL;
     pb.format = "{bar} {percent} {count}";
     return pb;
 }
@@ -39,6 +41,11 @@ ProgressBar showPercent(ProgressBar *pb, bool show) {
 
 ProgressBar showCount(ProgressBar *pb, bool show) {
     pb->showCount = show;
+    return *pb;
+}
+
+ProgressBar setCompletedText(ProgressBar *pb, char* text) {
+    pb->completedText = text;
     return *pb;
 }
 
@@ -119,8 +126,13 @@ void print(ProgressBar pb) {
     printf("%s", result);
     
     if (percent < 100) {
-        printf("\r");
+        printf("\b\r");
     } else {
-        printf("\n");
+        if (pb.completedText) {
+            printf("\33[2K\r");
+            printf("%s\n", pb.completedText);
+        } else {
+            printf("\n");
+        }
     }
 }

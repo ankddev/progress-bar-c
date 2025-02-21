@@ -2,13 +2,22 @@
 #include "../progress-bar-c.h"
 
 int main() {
+    // Initilaize counter
     int i = 0;
-    ProgressBar pb = init('#', 10, 10);
+    // Initialize progress bar
+    ProgressBar pb = init('#', 10, 6);
+    // Show percents
     showPercent(&pb, true);
+    // Show count
     showCount(&pb, true);
-    while (i <= 10) {
+    // Set completed text
+    setCompletedText(&pb, "Completed");
+    while (i <= 6) {
+        // Sleep one second
         sleep(1);
+        // Update counter
         update(&pb, i);
+        // Print progressbar
         print(pb);
         i++;
     }
