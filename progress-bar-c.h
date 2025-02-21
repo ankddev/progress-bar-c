@@ -39,14 +39,35 @@ ProgressBar showPercent(ProgressBar *pb, bool show) {
     return *pb;
 }
 
+char getSymbol(ProgressBar *pb) {
+    return pb->symbol;
+}
+
+ProgressBar setSymbol(ProgressBar *pb, char symbol) {
+    pb->symbol = symbol;
+    return *pb;
+}
+
+bool getShowPercent(ProgressBar *pb) {
+    return pb->showPercent;
+}
+
 ProgressBar showCount(ProgressBar *pb, bool show) {
     pb->showCount = show;
     return *pb;
 }
 
+bool getShowCount(ProgressBar *pb) {
+    return pb->showCount;
+}
+
 ProgressBar setCompletedText(ProgressBar *pb, char* text) {
     pb->completedText = text;
     return *pb;
+}
+
+char* getCompletedText(ProgressBar *pb) {
+    return pb->completedText;
 }
 
 ProgressBar setStartEndSymbols(ProgressBar *pb, char start, char end) {
@@ -55,9 +76,21 @@ ProgressBar setStartEndSymbols(ProgressBar *pb, char start, char end) {
     return *pb;
 }
 
+char* getStartSymbol(ProgressBar *pb) {
+    return pb->startSymbol;
+}
+
+char* getEndSymbol(ProgressBar *pb) {
+    return pb->endSymbol;
+}
+
 ProgressBar setCustomFormat(ProgressBar *pb, char* format) {
     pb->format = format;
     return *pb;
+}
+
+char* getCustomFormat(ProgressBar *pb) {
+    return pb->format;
 }
 
 ProgressBar tick(ProgressBar *pb) {

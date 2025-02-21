@@ -68,7 +68,21 @@ ProgressBar showCount(ProgressBar *pb, bool show)                  // Toggle cou
 ProgressBar setStartEndSymbols(ProgressBar *pb, char start, char end)  // Set custom brackets
 ProgressBar setCustomFormat(ProgressBar *pb, char* format)         // Set custom format string
 ProgressBar setCompletedText(ProgressBar *pb, char* text)          // Set text showed when progress is completed
+ProgressBar setSymbol(ProgressBar *pb, char symbol)                // Set symbol for filling progress bar
 ```
+
+### Getters
+
+```c
+bool getShowPercent(ProgressBar *pb)   // Get percentage display
+bool getShowCount(ProgressBar *pb,)    // Get count display
+char getStartSymbol(ProgressBar *pb)   // Get start symbol
+char getEndSymbol(ProgressBar *pb)     // Get end symbol
+char* setCustomFormat(ProgressBar *pb) // Get custom format string
+char* setCompletedText(ProgressBar *pb)// Get text showed when progress is completed
+char getSymbol(ProgressBar *pb)        // Get symbol for filling progress bar
+```
+
 
 ### Format String Options
 
