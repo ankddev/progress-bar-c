@@ -61,6 +61,8 @@ ehthumbs.db
 Thumbs.db
 
 # Custom - compiled examples
+examples/sample
 examples/basic_example
 examples/custom_format_example
 examples/custom_symbols_example
+examples/*.exe
