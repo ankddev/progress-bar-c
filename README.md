@@ -18,12 +18,15 @@ A single-header, simple, customizable progress bar library for C programs. Creat
 Simply include the header file in your project:
 
 ```c
+#define PROGRESS_BAR_C_IMPLEMENTATION
 #include "progress-bar-c.h"
 ```
 
 ## Quick Start
 
 ```c
+// Do this ONCE in C/C++ file
+#define PROGRESS_BAR_C_IMPLEMENTATION
 #include "progress-bar-c.h"
 
 int main() {
