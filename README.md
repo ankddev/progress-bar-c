@@ -15,7 +15,7 @@ A single-header, simple, customizable progress bar library for C programs. Creat
 
 ## Installation
 
-Simply include the header file in your project:
+Simply copy and include the header file in your project:
 
 ```c
 #define PROGRESS_BAR_C_IMPLEMENTATION
