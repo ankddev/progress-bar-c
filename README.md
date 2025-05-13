@@ -58,32 +58,32 @@ ProgressBar init(char symbol, int length, int total)
 ### Core Functions
 
 ```c
-ProgressBar update(ProgressBar *pb, int progress)  // Update progress value
-ProgressBar tick(ProgressBar *pb)                  // Increment progress by 1
-void print(ProgressBar pb)                         // Display the progress bar
+ProgressBar update(ProgressBar *pb, int progress);  // Update progress value
+ProgressBar tick(ProgressBar *pb);                  // Increment progress by 1
+void print(ProgressBar pb);                         // Display the progress bar
 ```
 
 ### Customization
 
 ```c
-ProgressBar showPercent(ProgressBar *pb, bool show)                // Toggle percentage display
-ProgressBar showCount(ProgressBar *pb, bool show)                  // Toggle count display
-ProgressBar setStartEndSymbols(ProgressBar *pb, char start, char end)  // Set custom brackets
-ProgressBar setCustomFormat(ProgressBar *pb, char* format)         // Set custom format string
-ProgressBar setCompletedText(ProgressBar *pb, char* text)          // Set text showed when progress is completed
-ProgressBar setSymbol(ProgressBar *pb, char symbol)                // Set symbol for filling progress bar
+ProgressBar showPercent(ProgressBar *pb, bool show);                    // Toggle percentage display
+ProgressBar showCount(ProgressBar *pb, bool show);                      // Toggle count display
+ProgressBar setStartEndSymbols(ProgressBar *pb, char start, char end);  // Set custom brackets
+ProgressBar setCustomFormat(ProgressBar *pb, char* format);             // Set custom format string
+ProgressBar setCompletedText(ProgressBar *pb, char* text);              // Set text showed when progress is completed
+ProgressBar setSymbol(ProgressBar *pb, char symbol);                    // Set symbol for filling progress bar
 ```
 
 ### Getters
 
 ```c
-bool getShowPercent(ProgressBar *pb)   // Get percentage display
-bool getShowCount(ProgressBar *pb,)    // Get count display
-char getStartSymbol(ProgressBar *pb)   // Get start symbol
-char getEndSymbol(ProgressBar *pb)     // Get end symbol
-char* setCustomFormat(ProgressBar *pb) // Get custom format string
-char* setCompletedText(ProgressBar *pb)// Get text showed when progress is completed
-char getSymbol(ProgressBar *pb)        // Get symbol for filling progress bar
+bool getShowPercent(ProgressBar *pb);    // Get percentage display
+bool getShowCount(ProgressBar *pb);      // Get count display
+char getStartSymbol(ProgressBar *pb);    // Get start symbol
+char getEndSymbol(ProgressBar *pb);      // Get end symbol
+char* setCustomFormat(ProgressBar *pb);  // Get custom format string
+char* setCompletedText(ProgressBar *pb); // Get text showed when progress is completed
+char getSymbol(ProgressBar *pb);         // Get symbol for filling progress bar
 ```
 
 
@@ -164,3 +164,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 ANKDDEV - [GitHub Profile](https://github.com/ANKDDEV)
+
